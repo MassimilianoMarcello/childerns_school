@@ -41,6 +41,9 @@
   .menu_icon {
     margin-right: -18rem;
   }
+  .mobile_menu_container{
+    display: none;
+  }
   
 }
 
@@ -153,7 +156,7 @@
 .sub_menu {
   position: absolute;
   top: 100%; /* Posiziona il sottomenu sotto il link principale */
-  left: 0;
+  left: 40rem;
   background-color: #fff; /* Aggiungi un colore di sfondo al sottomenu */
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra al sottomenu */

@@ -51,7 +51,55 @@ const NavBar2 = () => {
         { href: "/projects/project2", label: "Project 2" }
       ]
     },
-    // Aggiungi altri sottomenu se necessario
+    {
+      label: "Kiss my ass",
+      links: [
+        { href: "/kiss_my_ass/page1", label: "Page 1" },
+        { href: "/kiss_my_ass/page2", label: "Page 2" }
+      ]
+    },
+    {
+      label: "About Me",
+      links: [
+        { href: "/about_me/page1", label: "Page 1" },
+        { href: "/about_me/page2", label: "Page 2" }
+      ]
+    },
+    {
+      label: "Projects",
+      links: [
+        { href: "/projects/project1", label: "Project 1" },
+        { href: "/projects/project2", label: "Project 2" }
+      ]
+    },
+    {
+      label: "Kiss my ass",
+      links: [
+        { href: "/kiss_my_ass/page1", label: "Page 1" },
+        { href: "/kiss_my_ass/page2", label: "Page 2" }
+      ]
+    },
+    {
+      label: "About Me",
+      links: [
+        { href: "/about_me/page1", label: "Page 1" },
+        { href: "/about_me/page2", label: "Page 2" }
+      ]
+    },
+    {
+      label: "Projects",
+      links: [
+        { href: "/projects/project1", label: "Project 1" },
+        { href: "/projects/project2", label: "Project 2" }
+      ]
+    },
+    {
+      label: "Kiss my ass",
+      links: [
+        { href: "/kiss_my_ass/page1", label: "Page 1" },
+        { href: "/kiss_my_ass/page2", label: "Page 2" }
+      ]
+    },
   ];
 
   return (
@@ -95,6 +143,7 @@ const NavBar2 = () => {
         </ul>
 
         {/* mobile */}
+        <div className={styles.mobile_menu_container}>
         {subMenus.map((subMenu, subMenuIndex) => (
   <div key={subMenuIndex}>
     <p>{subMenu.label}</p>
@@ -107,6 +156,10 @@ const NavBar2 = () => {
     </ul>
   </div>
 ))}
+
+
+        </div>
+       
 
       </div>
     </nav>
