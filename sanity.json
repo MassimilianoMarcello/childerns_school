@@ -1,0 +1,12 @@
+{
+    "api": {
+      "projectId": "s5zezdma",
+      "dataset": "production",
+      "CORS": [
+        "https://main--lambent-khapse-a95135.netlify.app",
+        "https://cdn.sanity.io"
+       
+      ]
+    }
+  }
+  

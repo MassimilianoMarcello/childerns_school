@@ -1,0 +1,193 @@
+/* Stili per la barra di navigazione */
+.nav_container {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 6rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Stili per l'animazione del testo */
+.animated_text {
+  font-family: "protest guerrilla";
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: black;
+  margin-left: 0.5rem;
+  margin-top: 0rem;
+  /* animation: slideIn 1.8s ease-in-out; */
+}
+
+/* @keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+} */
+
+/* Stili per l'animazione del logo */
+.animated_logo {
+  margin-left: -0.3rem;
+  margin-top: 1rem;
+  margin-right: 0rem;
+  /* animation: fadeIn 2s ease-in-out; */
+  align-items: center;
+  z-index: -1;
+}
+
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+.menu_icon {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-right: -10rem;
+}
+
+
+@media screen and (min-width: 600px) {
+  .menu_icon {
+    margin-right: -18rem;
+
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu_icon {
+    margin-right: -20rem;
+
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .menu_icon {
+    display: none;
+  }}
+
+
+
+
+.nav_menu {
+
+  list-style: none;
+  display: none;
+  margin-bottom: -2rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Media query per il menu */
+@media screen and (min-width: 920px) {
+  .nav_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+/* Stili per la classe attiva del menu */
+.nav_menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 6rem;
+  border-bottom: solid 4rem yellow;
+}
+
+/* Media query per la classe attiva del menu */
+@media screen and (min-width: 920px) {
+  .nav_menu.active {
+    flex-direction: row;
+    margin-top: 7.2rem;
+    border-bottom: none;
+    background-color: transparent;
+  }
+}
+
+/* Stili per gli elementi del menu */
+.nav_item {
+  text-align: center;
+  list-style-type: none;
+  margin: 3.5rem;
+  font-size: 2rem;
+ 
+}
+.nav_item a{
+
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Media query per gli elementi del menu */
+@media screen and (min-width: 920px) {
+  .nav_item {
+    margin-top: -4.5rem;
+    margin-left: 0;
+  
+  }
+}
+
+/* Stili per i link del menu */
+.nav_link {
+  text-decoration: none;
+  list-style: none;
+  color:black;
+  font-size: 1.5
+}
+
+.image{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav_list{
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 920px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}

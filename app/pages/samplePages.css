@@ -1,0 +1,34 @@
+.kindergarten {
+  background: url(/assets/HoiBoy.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.text-sample {
+  background-color: blueviolet;
+  display: block;
+  color: #fff;
+  margin: 0rem 2rem;
+  margin-top: 15rem;
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 1170px) {
+  .kindergarten {
+
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  .text-sample {
+    margin: 0rem auto;
+    margin-top: -20rem;
+
+    font-size: 5em;
+  }
+}
