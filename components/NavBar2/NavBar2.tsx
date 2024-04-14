@@ -26,7 +26,7 @@ const NavBar2 = () => {
     setSubMenuIndex(subMenuIndex === index ? null : index); // Apri o chiudi il sottomenu
   };
 
-  const logoPath = "/assets/c_logo3.png";
+  const logoPath = "/assets/c_logo5.png";
 
   const menuLinks = [
     { href: "/about_me", label: "About Me" },
@@ -127,7 +127,7 @@ const NavBar2 = () => {
               <span className={styles.nav_link} onClick={() => handleSubMenuClick(index)}>
                 {link.label}
                 {subMenuIndex === index && (
-                  <ul className={styles.sub_menu}>
+                <ul className={`${styles.sub_menu} ${styles[`sub_menu_${index}`]}`}>
                     {subMenus[index].links.map((subLink, subIndex) => (
                       <li key={subIndex} className={styles.sub_menu_item}>
                         <Link href={subLink.href}>

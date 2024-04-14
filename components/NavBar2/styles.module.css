@@ -23,8 +23,8 @@
 
 /* Stili per l'animazione del logo */
 .animated_logo {
-  margin-left: -0.3rem;
-  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-top: .5rem;
   margin-right: 0rem;
   /* animation: fadeIn 2s ease-in-out; */
   align-items: center;
@@ -156,11 +156,14 @@
 .sub_menu {
   position: absolute;
   top: 100%; /* Posiziona il sottomenu sotto il link principale */
-  left: 40rem;
+  left: 50rem;
   background-color: #fff; /* Aggiungi un colore di sfondo al sottomenu */
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra al sottomenu */
   display: none; /* Nascondi il sottomenu per impostazione predefinita */
+}
+.sub_menu_1{
+  left: 60rem;
 }
 
 .nav_item:hover .sub_menu {
