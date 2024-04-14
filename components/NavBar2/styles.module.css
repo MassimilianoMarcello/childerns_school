@@ -63,7 +63,7 @@
   list-style: none;
   display: none;
   margin-bottom: -2rem;
-  font-family: "Quicksand", sans-serif;
+  /* font-family: "Quicksand", sans-serif; */
 }
 
 /* Media query per il menu */
@@ -84,9 +84,12 @@
   top: 0;
   right: 0;
   width: 100%;
+  max-height: 80vh; /* Altezza massima del menu (80% dell'altezza dello schermo) */
+  overflow-y: auto; /* Abilita lo scrolling verticale quando necessario */
   background-color: #fff;
   margin-top: 6rem;
   border-bottom: solid 4rem yellow;
+
 }
 
 /* Media query per la classe attiva del menu */
