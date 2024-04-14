@@ -29,77 +29,47 @@ const NavBar2 = () => {
   const logoPath = "/assets/c_logo5.png";
 
   const menuLinks = [
-    { href: "/about_me", label: "About Me" },
-    { href: "/projects", label: "Projects" },
-    { href: "/blog_post", label: "Blog" },
-    { href: "mailto:massi.marcello@icloud.com", label: "Contact" }
+    { href: "/about", label: "About us" },
+    { href: "/admissions", label: "Admissions" },
+    { href: "/community_resources", label: "Community Resources" },
+    { href: "mailto:sarapegno@icloud.com", label: "Contact" }
   ];
 
   // Array di sottomenu e relativi sottolink
   const subMenus = [
     {
-      label: "About Me",
+      label: "About us",
       links: [
-        { href: "/about_me/page1", label: "Page 1" },
-        { href: "/about_me/page2", label: "Page 2" }
+        { href: "/about", label: "About us" },
+        { href: "/contact", label: "Contact" },
+        { href: "/employment_opportunities", label: "Jobs" },
+        { href: "/leadership", label: "Leadership" },
+        { href: "/leadership", label: "Leadership" },
+        { href: "/our_board", label: "Our Board" },
       ]
     },
     {
-      label: "Projects",
+      label: "Admissions",
       links: [
-        { href: "/projects/project1", label: "Project 1" },
-        { href: "/projects/project2", label: "Project 2" }
+        { href: "admissions_process", label: "Admissions" },
+        { href: "/apply_today", label: "Apply today" }
       ]
     },
     {
-      label: "Kiss my ass",
+      label: "Community Resources",
       links: [
-        { href: "/kiss_my_ass/page1", label: "Page 1" },
-        { href: "/kiss_my_ass/page2", label: "Page 2" }
+        { href: "/camp", label: "Camp" },
+        { href: "/gym", label: "Gym" }
       ]
     },
     {
-      label: "About Me",
+      label: "Contact",
       links: [
-        { href: "/about_me/page1", label: "Page 1" },
-        { href: "/about_me/page2", label: "Page 2" }
+        { href: "mailto:sarapegno@icloud.com", label: "Contact" }
+      
       ]
     },
-    {
-      label: "Projects",
-      links: [
-        { href: "/projects/project1", label: "Project 1" },
-        { href: "/projects/project2", label: "Project 2" }
-      ]
-    },
-    {
-      label: "Kiss my ass",
-      links: [
-        { href: "/kiss_my_ass/page1", label: "Page 1" },
-        { href: "/kiss_my_ass/page2", label: "Page 2" }
-      ]
-    },
-    {
-      label: "About Me",
-      links: [
-        { href: "/about_me/page1", label: "Page 1" },
-        { href: "/about_me/page2", label: "Page 2" }
-      ]
-    },
-    {
-      label: "Projects",
-      links: [
-        { href: "/projects/project1", label: "Project 1" },
-        { href: "/projects/project2", label: "Project 2" }
-      ]
-    },
-    {
-      label: "Kiss my ass",
-      links: [
-        { href: "/kiss_my_ass/page1", label: "Page 1" },
-        { href: "/kiss_my_ass/page2", label: "Page 2" }
-      ]
-    },
+    
   ];
 
   return (
