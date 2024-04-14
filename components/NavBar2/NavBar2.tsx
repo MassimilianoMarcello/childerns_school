@@ -1,5 +1,5 @@
 "use client";
-// Import React, useState, Image, Link, and the CSS module
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
