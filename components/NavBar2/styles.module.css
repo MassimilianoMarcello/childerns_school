@@ -24,11 +24,13 @@
 /* Stili per l'animazione del logo */
 .animated_logo {
   margin-left: 1rem;
-  margin-top: .5rem;
+  margin-top: 1rem;
   margin-right: 0rem;
   /* animation: fadeIn 2s ease-in-out; */
   align-items: center;
   z-index: -1;
+  display: flex;
+  align-items: center;
 }
 
 .menu_icon {

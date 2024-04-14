@@ -32,7 +32,8 @@ const NavBar2 = () => {
     { href: "/about", label: "About us" },
     { href: "/admissions", label: "Admissions" },
     { href: "/community_resources", label: "Community Resources" },
-    { href: "mailto:sarapegno@icloud.com", label: "Contact" }
+    { href: "mailto:sarapegno@icloud.com", label: "Contact" },
+    { href: "/early_childhood", label: "Early Childhood" }
   ];
 
   // Array di sottomenu e relativi sottolink
@@ -66,6 +67,13 @@ const NavBar2 = () => {
       label: "Contact",
       links: [
         { href: "mailto:sarapegno@icloud.com", label: "Contact" }
+      
+      ]
+    },
+    {
+      label: "In the classroom",
+      links: [
+        { href: "/early_childhood", label: "Early Childhood" }
       
       ]
     },

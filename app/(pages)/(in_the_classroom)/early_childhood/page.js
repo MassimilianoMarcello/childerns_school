@@ -1,5 +1,5 @@
 import "../../samplePages.css";
-import Early from '../../../../app/(from_sanity)/early/serve';
+import Early from '../../../(from_sanity)/early/serve';
 
 
 export default function EarlyChildhood() {
