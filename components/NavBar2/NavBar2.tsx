@@ -8,24 +8,26 @@ import xmarkSolid from "@/public/assets/xmark-solid.svg";
 import styles from './styles.module.css';
 
 
-const NavBar2 = () => {
-  // State per gestire il click sul menu
-  const [click, setClick] = useState(false);
 
-  // Funzione per gestire il click sul menu
+
+const NavBar2 = () => {
+  const [click, setClick] = useState(false);
+  const [subMenuIndex, setSubMenuIndex] = useState(null); // Stato per gestire l'apertura dei sottomenu
+
   const handleClick = () => {
     setClick(!click);
   };
 
-  // Funzione per chiudere il menu
   const handleCloseMenu = () => {
     setClick(false);
   };
 
-  // Percorso dell'immagine del logo
+  const handleSubMenuClick = (index:any) => {
+    setSubMenuIndex(subMenuIndex === index ? null : index); // Apri o chiudi il sottomenu
+  };
+
   const logoPath = "/assets/c_logo3.png";
 
-  // Array di oggetti per i link del menu
   const menuLinks = [
     { href: "/about_me", label: "About Me" },
     { href: "/projects", label: "Projects" },
@@ -33,18 +35,33 @@ const NavBar2 = () => {
     { href: "mailto:massi.marcello@icloud.com", label: "Contact" }
   ];
 
+  // Array di sottomenu e relativi sottolink
+  const subMenus = [
+    {
+      label: "About Me",
+      links: [
+        { href: "/about_me/page1", label: "Page 1" },
+        { href: "/about_me/page2", label: "Page 2" }
+      ]
+    },
+    {
+      label: "Projects",
+      links: [
+        { href: "/projects/project1", label: "Project 1" },
+        { href: "/projects/project2", label: "Project 2" }
+      ]
+    },
+    // Aggiungi altri sottomenu se necessario
+  ];
+
   return (
     <nav className={styles.nav_container}>
-    <div className={styles.nav_fixed}>
-      {/* Link al homepage */}
-      <Link className={styles.logo_container} href="/">
-        {/* <h1 className={styles.animated_text}>frenzu</h1> */}
-        <div className={styles.animated_logo}>
-          {/* Immagine del logo */}
-          <Image src={logoPath} alt="children school logo" width={240} height={80} />
-        </div>
-      </Link>
-        {/* Icona del menu */}
+      <div className={styles.nav_fixed}>
+        <Link className={styles.logo_container} href="/">
+          <div className={styles.animated_logo}>
+            <Image src={logoPath} alt="children school logo" width={240} height={80} />
+          </div>
+        </Link>
         <div className={styles.menu_icon} onClick={handleClick}>
           <Image
             src={click ? xmarkSolid : barsSolid}
@@ -55,15 +72,24 @@ const NavBar2 = () => {
           />
         </div>
       </div>
-      {/* Menu */}
       <div className={`${styles.nav_menu} ${click ? styles.active : ""}`}>
         <ul className={styles.nav_list}>
-          {/* Voci di menu */}
           {menuLinks.map((link, index) => (
-            <li key={index} className={styles.nav_item} onClick={handleCloseMenu}>
-              <Link href={link.href} passHref>
-                <p className={styles.nav_link}>{link.label}</p>
-              </Link>
+            <li key={index} className={styles.nav_item}>
+              <span className={styles.nav_link} onClick={() => handleSubMenuClick(index)}>
+                {link.label}
+                {subMenuIndex === index && (
+                  <ul className={styles.sub_menu}>
+                    {subMenus[index].links.map((subLink, subIndex) => (
+                      <li key={subIndex} className={styles.sub_menu_item}>
+                        <Link href={subLink.href}>
+                          <p className={styles.sub_menu_link}>{subLink.label}</p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </span>
             </li>
           ))}
         </ul>

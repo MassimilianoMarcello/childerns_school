@@ -19,31 +19,9 @@
   color: black;
   margin-left: 0.5rem;
   margin-top: 0rem;
-  /* animation: slideIn 1.8s ease-in-out; */
+
 }
 
-/* @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(20%);
-  }
-  75% {
-    opacity: 1;
-    transform: translateY(-20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-} */
 
 /* Stili per l'animazione del logo */
 .animated_logo {
@@ -120,6 +98,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    
   }
 }
 
@@ -186,8 +165,30 @@
 .nav_list{
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 920px) {
-    flex-direction: row;
-    align-items: center;
-  }
+
+}
+@media screen and (min-width: 920px) {
+  .nav_list{ flex-direction: row;
+  align-items: center;
+
+}
+}
+
+.sub_menu{
+background-color: #fff;
+position: relative;
+}
+
+.sub_menu {
+  position: absolute;
+  top: 100%; /* Posiziona il sottomenu sotto il link principale */
+  left: 0;
+  background-color: #fff; /* Aggiungi un colore di sfondo al sottomenu */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra al sottomenu */
+  display: none; /* Nascondi il sottomenu per impostazione predefinita */
+}
+
+.nav_item:hover .sub_menu {
+  display: block; /* Mostra il sottomenu quando il link principale è in hover */
 }
