@@ -93,6 +93,21 @@ const NavBar2 = () => {
             </li>
           ))}
         </ul>
+
+        {/* mobile */}
+        {subMenus.map((subMenu, subMenuIndex) => (
+  <div key={subMenuIndex}>
+    <p>{subMenu.label}</p>
+    <ul>
+      {subMenu.links.map((subLink, subLinkIndex) => (
+        <li key={subLinkIndex}>
+          <Link href={subLink.href}>{subLink.label}</Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
+
       </div>
     </nav>
   );

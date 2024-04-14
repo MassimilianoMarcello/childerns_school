@@ -167,5 +167,8 @@
 .sub_menu{
   position: relative;
 }
+.nav_list {
+ display: none;
+}
 
 }
