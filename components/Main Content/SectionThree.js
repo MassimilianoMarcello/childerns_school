@@ -9,8 +9,8 @@ const SectionThree = () => {
           <h1 className="title-6">Join our family</h1>
   
           <p className="text-6">
-            The future is bright: feel the warmth. <br /> Join the MDS family today to
-            experience the magic of MDS firsthand. <br /> 
+            The future is bright: feel the warmth. <br /> Join the CS family today to
+            experience the magic of CS firsthand. <br /> 
           </p>
           <AskLinkContainer className="ask-link-container">
             <p className="text-6">Have a question about application?</p>

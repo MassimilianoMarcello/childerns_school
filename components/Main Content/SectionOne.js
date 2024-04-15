@@ -14,14 +14,14 @@ const SectionOne = () => {
             </h1>
 
             <p>
-              Manhattan Day School Yeshiva Ohr Torah is a Modern Orthodox
-              Yeshiva day school located on the Upper West Side of Manhattan,
-              serving Toddlers through Eighth Grade. Founded in 1943, we have 80
-              years of experience in educating Jewish children in a warm Torah
+              Elementary's scholl is a Modern school
+              for day school located on the centre of Brussels,
+              serving children through Eighth Grade. Founded in 1943, we have 80
+              years of experience in educating  children in a warm happy
               environment.
             </p>
 
-            <h2>Ready to become a part of MDS?</h2>
+            <h2>Ready to become a part of CS?</h2>
             <Button>
               {" "}
               <Link href="./apply" className="btn-apply">
@@ -35,11 +35,11 @@ const SectionOne = () => {
         <ParallaxInnerTwo className="parallax-inner">
           <h2>
             Our curriculum sharpens minds, expands horizons, and hones critical
-            skills in Judaic and general studies.
+            skills in scientific and general studies.
           </h2>
 
           <p>
-            From the wisdom of Hashem, and the love of Israel, to humanities and
+            From the wisdom of Cd, and the love of learning, to humanities and
             social sciences to STEM and the arts, students engage in a dynamic
             exploration of the world around them, cultivating skills and
             knowledge that are core for success.
