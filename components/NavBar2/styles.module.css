@@ -44,16 +44,14 @@
   align-items: center;
 }
 
-.menu_icon {
 
-  cursor: pointer;
-  margin-top: 0.5rem;
-  margin-right: -1rem;
-}
 
 @media screen and (min-width: 600px) {
   .menu_icon {
-    margin-right: -1rem;
+ 
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: 1rem;
   }
   .mobile_menu_container{
     display: none;
@@ -198,7 +196,10 @@
 .nav_list {
  display: none;
 }
+.menu_icon{
+  margin-top: 1rem;
 
+}
 }
 
 .mobile_menu_container{

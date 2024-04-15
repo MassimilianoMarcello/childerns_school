@@ -10,22 +10,23 @@ import styles from './styles.module.css';
 
 
 
+
+
 const NavBar2 = () => {
   const [click, setClick] = useState(false);
-  const [subMenuIndex, setSubMenuIndex] = useState(null); // Stato per gestire l'apertura dei sottomenu
+  const [subMenuIndex, setSubMenuIndex] = useState(null);
 
   const handleClick = () => {
     setClick(!click);
   };
-
-
 
   const handleCloseMenu = () => {
     setClick(false);
   };
 
   const handleSubMenuClick = (index:any) => {
-    setSubMenuIndex(subMenuIndex === index ? null : index); 
+    setSubMenuIndex(subMenuIndex === index ? null : index);
+    handleCloseMenu();
   };
 
   const logoPath = "/assets/Children.png";
@@ -36,17 +37,12 @@ const NavBar2 = () => {
     { href: "/admissions", label: "Admissions" },
     { href: "/community_resources", label: "Community Resources" },
     { href: "mailto:sarapegno@icloud.com", label: "Contact" },
-  
   ];
 
-  // Array di sottomenu e relativi sottolink
   const subMenus = [
     {
       label: "In the classroom",
-      links: [
-        { href: "/early_childhood", label: "Early Childhood" }
-      
-      ]
+      links: [{ href: "/early_childhood", label: "Early Childhood" }]
     },
     {
       label: "About us",
@@ -54,7 +50,6 @@ const NavBar2 = () => {
         { href: "/about", label: "About us" },
         { href: "/contact", label: "Contact" },
         { href: "/employment_opportunities", label: "Jobs" },
-        { href: "/leadership", label: "Leadership" },
         { href: "/leadership", label: "Leadership" },
         { href: "/our_board", label: "Our Board" },
       ]
@@ -75,13 +70,8 @@ const NavBar2 = () => {
     },
     {
       label: "Contact",
-      links: [
-        { href: "mailto:sarapegno@icloud.com", label: "Contact" }
-      
-      ]
+      links: [{ href: "mailto:sarapegno@icloud.com", label: "Contact" }]
     },
-
-    
   ];
 
   return (
@@ -90,7 +80,7 @@ const NavBar2 = () => {
         <Link className={styles.logo_container} href="/">
           <div className={styles.animated_logo}>
             <Image src={logoPath} alt="children school logo" width={90} height={90} />
-          <h1 className={styles.animated_text}> Children's  <br />School</h1>
+            <h1 className={styles.animated_text}> Children's  <br />School</h1>
           </div>
         </Link>
         <div className={styles.menu_icon} onClick={handleClick}>
@@ -107,43 +97,42 @@ const NavBar2 = () => {
         <ul className={styles.nav_list}>
           {menuLinks.map((link, index) => (
             <li key={index} className={styles.nav_item}>
-              <span className={styles.nav_link} onClick={() => handleSubMenuClick(index)}>
-                {link.label}
-                {subMenuIndex === index && (
-                <ul className={`${styles.sub_menu} ${styles[`sub_menu_${index}`]}`}>
-                    {subMenus[index].links.map((subLink, subIndex) => (
-                      <li key={subIndex} className={styles.sub_menu_item}>
-                        <Link href={subLink.href}>
-                          <p className={styles.sub_menu_link}>{subLink.label}</p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </span>
+              <Link href={link.href} onClick={handleCloseMenu}>
+                <span className={styles.nav_link} onClick={() => handleSubMenuClick(index)}>
+                  {link.label}
+                  {subMenuIndex === index && (
+                    <ul className={`${styles.sub_menu} ${styles[`sub_menu_${index}`]}`}>
+                      {subMenus[index].links.map((subLink, subIndex) => (
+                        <li key={subIndex} className={styles.sub_menu_item}>
+                          <Link href={subLink.href} onClick={handleCloseMenu}>
+                            <p className={styles.sub_menu_link}>{subLink.label}</p>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
 
-        {/* mobile */}
-        <div className={styles.mobile_menu_container}>
-        {subMenus.map((subMenu, subMenuIndex) => (
-  <div key={subMenuIndex}>
-    <p className={styles.mobile_menu_label}>{subMenu.label}</p>
-    <ul className={styles.mobile_list_container}>
-      {subMenu.links.map((subLink, subLinkIndex) => (
-        <li key={subLinkIndex}>
-          <Link className={styles.mobile_sub_menu_link} href={subLink.href}>{subLink.label}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-))}
-
-
+        <div className={styles.mobile_menu_container} style={{ display: click ? 'block' : 'none' }}>
+          {subMenus.map((subMenu, subMenuIndex) => (
+            <div key={subMenuIndex}>
+              <p className={styles.mobile_menu_label}>{subMenu.label}</p>
+              <ul className={styles.mobile_list_container}>
+                {subMenu.links.map((subLink, subLinkIndex) => (
+                  <li key={subLinkIndex}>
+                    <Link className={styles.mobile_sub_menu_link} href={subLink.href} onClick={handleCloseMenu}>
+                      {subLink.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-       
-
       </div>
     </nav>
   );
