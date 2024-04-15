@@ -18,6 +18,8 @@ const NavBar2 = () => {
     setClick(!click);
   };
 
+
+
   const handleCloseMenu = () => {
     setClick(false);
   };

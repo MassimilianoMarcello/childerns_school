@@ -131,6 +131,7 @@
   list-style: none;
   color: black;
   font-size: 1.5rem;
+  position: relative;
 }
 
 .image {
@@ -149,26 +150,30 @@
   .nav_list {
     flex-direction: row;
     align-items: center;
+  
   }
 }
 
 /* Stili per i sottomenu */
-.sub_menu {
-  background-color: #fff;
-  position: relative;
-}
+
 
 .sub_menu {
   position: absolute;
   top: 100%; /* Posiziona il sottomenu sotto il link principale */
-  left: 50rem;
+  left: 0rem;
   background-color: #fff; /* Aggiungi un colore di sfondo al sottomenu */
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra al sottomenu */
   display: none; /* Nascondi il sottomenu per impostazione predefinita */
 }
 .sub_menu_1{
-  left: 60rem;
+
+}
+.sub_menu_2{
+  left: 0rem;
+}
+.sub_menu_3{
+  left: 0rem;
 }
 
 .nav_item:hover .sub_menu {
