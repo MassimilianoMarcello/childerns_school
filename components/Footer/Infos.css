@@ -98,12 +98,12 @@
     margin-top: 25px;
   }
   .footer-container p:nth-child(2) {
-    /* 310 west street */
+    /* Rue des libertines */
     grid-column: 1/2;
     grid-row: 4/5;
   }
   .footer-container p:nth-child(3) {
-    /* New York New York 10023 */
+    /* Brussels 1000 */
     grid-column: 1/2;
     grid-row: 5/6;
   }
@@ -127,14 +127,14 @@
     padding-left: 10px;
   }
   .footer-container p:nth-child(7) {
-    /* SUPPORING MDS */
+    /* SUPPORING cS */
 
     grid-column: 2/3;
     grid-row: 6/7;
     padding-left: 10px;
   }
   .footer-container p:nth-child(6) {
-    /* ABOUT MDS */
+    /* ABOUT cS */
     grid-column: 3/4;
     grid-row: 6/7;
   }
@@ -145,3 +145,41 @@
     grid-row: 4/5;
   }
 }
+
+
+/* logo styles */
+
+.animated_text {
+  font-family: "Euclid Flex";
+  text-transform: uppercase;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color:#fff;
+  margin-left: 0.5rem;
+  margin-top: 0rem;
+  border-radius: 50%;
+}
+.logo_container{
+  text-decoration: none;
+
+  max-width: 100%;
+  height: auto;
+  margin-top: -5rem;
+
+}
+
+
+.animated_logo {
+  text-align: center;
+  margin-left: 1rem;
+  margin-top: 0rem;
+  margin-right: 0rem;
+
+  align-items: center;
+  z-index: -1;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+

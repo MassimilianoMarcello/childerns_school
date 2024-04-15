@@ -7,7 +7,7 @@ const PreFooter = () => {
 
     <h1 className='prefooter-title'>Want to support MDS?</h1>
     <Link href="./">General Donations</Link>
-    <Link href="./">Limmud Hayan</Link>
+    <Link href="./">Lorraain Ipsum</Link>
     <Link href="./">Program Sponsorship</Link>
     <Link href="./">Annual Dinner</Link>
 

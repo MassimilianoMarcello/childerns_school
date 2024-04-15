@@ -9,7 +9,7 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h1>Want to learn more about MDS? Contact Us</h1>
+      <h1>Want to learn more about CS? Contact Us</h1>
 
       <input
         type="text"

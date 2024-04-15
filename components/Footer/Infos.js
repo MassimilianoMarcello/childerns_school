@@ -1,19 +1,27 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import "./Infos.css";
+const logoPath = "/assets/Children.png";
 
 const Infos = () => {
   return (
     <footer className="footer-first-container">
       <div className="footer-container">
-        <img src="/assets/IconWhite.svg" alt="white logo" />
-        <p>310 West 75th Street</p>
-        <p>New York, New York 10023</p>
-        <a href="mailto:info@manhattanday.org" className="mail-to">
-          info@manhattanday.org
+      <Link className='logo_container' href="/">
+          <div className='.animated_logo'>
+            <Image src={logoPath} alt="children school logo" width={90} height={90} />
+          <h1 className='animated_text'> Children's  <br />School</h1>
+          </div>
+        </Link>
+        <p>Rue des libertines</p>
+        <p>Belgium, Brussels 1000</p>
+        <a href="mailto:info@origami.org" className="mail-to">
+          info@childrenschool.org
         </a>
         <div className="social-media-container">
           <a
-            href="https://twitter.com/i/flow/login?redirect_after_login=%2FManhattanDay%2F"
+            href="https://twitter.com"
             className="twitter-link"
           >
             <svg
@@ -31,7 +39,7 @@ const Infos = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/manhattandayschool/"
+            href="https://www.instagram.com"
             className="instagram-link"
           >
             <svg
@@ -57,7 +65,7 @@ const Infos = () => {
           </a>
 
           <a
-            href="https://www.facebook.com/ManhattanDaySchool1943/"
+            href="https://www.facebook.com"
             className="facebook-link"
           >
             <svg
@@ -75,8 +83,8 @@ const Infos = () => {
           </a>
         </div>
 
-        <p>ABOUT MDS</p>
-        <p> SUPPORTING MDS</p>
+        <p>ABOUT CS</p>
+        <p> SUPPORTING CS</p>
 
         <p>ADMISSIONS</p>
         <p>PARE</p>
