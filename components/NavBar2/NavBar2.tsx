@@ -25,10 +25,10 @@ const NavBar2 = () => {
   };
 
   const handleSubMenuClick = (index:any) => {
-    setSubMenuIndex(subMenuIndex === index ? null : index); // Apri o chiudi il sottomenu
+    setSubMenuIndex(subMenuIndex === index ? null : index); 
   };
 
-  const logoPath = "/assets/c_logo5.png";
+  const logoPath = "/assets/Children.png";
 
   const menuLinks = [
     { href: "/about", label: "About us" },
@@ -87,7 +87,8 @@ const NavBar2 = () => {
       <div className={styles.nav_fixed}>
         <Link className={styles.logo_container} href="/">
           <div className={styles.animated_logo}>
-            <Image src={logoPath} alt="children school logo" width={240} height={80} />
+            <Image src={logoPath} alt="children school logo" width={90} height={90} />
+          <h1 className={styles.animated_text}> Children's  <br />School</h1>
           </div>
         </Link>
         <div className={styles.menu_icon} onClick={handleClick}>

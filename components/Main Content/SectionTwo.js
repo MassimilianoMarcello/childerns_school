@@ -16,7 +16,7 @@ const sectionData = [
     goldenTitle: "Early Childhood Education",
     title: "designed to nurture and engage young minds",
     textParagraph:
-      "MDS creates a warm and welcoming place for our youngest learners -toddlers through kindergartners- to thrive as they begin their educational journey.",
+      "CS creates a warm and welcoming place for our youngest learners -toddlers through kindergartners- to thrive as they begin their educational journey.",
     linkHref: "./apply",
     linkText: "learn more",
   },
