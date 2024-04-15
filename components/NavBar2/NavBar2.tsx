@@ -26,7 +26,7 @@ const NavBar2 = () => {
 
   const handleSubMenuClick = (index:any) => {
     setSubMenuIndex(subMenuIndex === index ? null : index);
-    handleCloseMenu();
+  
   };
 
   const logoPath = "/assets/Children.png";
@@ -97,7 +97,7 @@ const NavBar2 = () => {
         <ul className={styles.nav_list}>
           {menuLinks.map((link, index) => (
             <li key={index} className={styles.nav_item}>
-              <Link href={link.href} onClick={handleCloseMenu}>
+              <p  onClick={handleCloseMenu}>
                 <span className={styles.nav_link} onClick={() => handleSubMenuClick(index)}>
                   {link.label}
                   {subMenuIndex === index && (
@@ -112,7 +112,7 @@ const NavBar2 = () => {
                     </ul>
                   )}
                 </span>
-              </Link>
+              </p>
             </li>
           ))}
         </ul>
