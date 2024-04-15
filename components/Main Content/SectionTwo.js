@@ -11,7 +11,7 @@ import {
 
 const sectionData = [
   {
-    imageSrc: "/assets/school-02.png",
+    imageSrc: "/assets/inclass3.jpeg",
     altText: "Teacher and student reading",
     goldenTitle: "Early Childhood Education",
     title: "designed to nurture and engage young minds",
@@ -21,7 +21,7 @@ const sectionData = [
     linkText: "learn more",
   },
   {
-    imageSrc: "/assets/school-01.png",
+    imageSrc: "/assets/inclass4.jpeg",
     altText: "Young Scientist",
     goldenTitle: "Middle School ",
     title: "helps groving student fluorish",
@@ -32,7 +32,7 @@ const sectionData = [
     linkText: "learn more",
   },
   {
-    imageSrc: "/assets/school-00.png",
+    imageSrc: "/assets/inclass2.jpeg",
     altText: "Children smiling",
     title: "builds a solid foundation for life",
     goldenTitle: "Lower School ",
