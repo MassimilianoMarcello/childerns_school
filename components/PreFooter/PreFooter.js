@@ -5,7 +5,7 @@ const PreFooter = () => {
   return (<>
   <div className='prefooter-container'>
 
-    <h1 className='prefooter-title'>Want to support MDS?</h1>
+    <h1 className='prefooter-title'>Want to support CS?</h1>
     <Link href="./">General Donations</Link>
     <Link href="./">Lorraain Ipsum</Link>
     <Link href="./">Program Sponsorship</Link>

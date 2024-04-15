@@ -117,7 +117,7 @@ const NavBar2 = () => {
           ))}
         </ul>
 
-        <div className={styles.mobile_menu_container} style={{ display: click ? 'block' : 'none' }}>
+        <div className={styles.mobile_menu_container} >
           {subMenus.map((subMenu, subMenuIndex) => (
             <div key={subMenuIndex}>
               <p className={styles.mobile_menu_label}>{subMenu.label}</p>
