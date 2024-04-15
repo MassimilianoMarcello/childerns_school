@@ -92,11 +92,11 @@
   top: 0;
   right: 0;
   width: 100%;
-  max-height: 80vh; /* Altezza massima del menu (80% dell'altezza dello schermo) */
+  max-height: 85vh; /* Altezza massima del menu (80% dell'altezza dello schermo) */
   overflow-y: auto; /* Abilita lo scrolling verticale quando necessario */
   background-color: #fff;
   margin-top: 6rem;
-  border-bottom: solid 4rem yellow;
+  border-bottom: solid 1rem yellow;
 
 }
 
@@ -173,7 +173,7 @@
   display: none; /* Nascondi il sottomenu per impostazione predefinita */
 }
 .sub_menu_1{
-
+  left: 0rem;
 }
 .sub_menu_2{
   left: 0rem;
@@ -196,13 +196,40 @@
 }
 
 .mobile_menu_container{
+  text-align: left;
+  margin-left: 8rem;
+
+
 
 }
+.mobile_list_container{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.mobile_list_container li{
+
+  padding-bottom: 1rem;
+}
+
+
 
 .mobile_menu_label{
-
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  color: #1d3b7a ;
 }
 
 .mobile_sub_menu_link{
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding:  12rem auto;
+  color: #254fa9;
+  font-family: "Euclid Flex";
+  font-weight: 300;
+}
+.mobile_sub_menu_link:hover{
+  color:#f5a700  ;
 
 }

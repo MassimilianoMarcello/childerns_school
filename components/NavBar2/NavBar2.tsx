@@ -31,15 +31,23 @@ const NavBar2 = () => {
   const logoPath = "/assets/Children.png";
 
   const menuLinks = [
+    { href: "/early_childhood", label: "Early Childhood" },
     { href: "/about", label: "About us" },
     { href: "/admissions", label: "Admissions" },
     { href: "/community_resources", label: "Community Resources" },
     { href: "mailto:sarapegno@icloud.com", label: "Contact" },
-    { href: "/early_childhood", label: "Early Childhood" }
+  
   ];
 
   // Array di sottomenu e relativi sottolink
   const subMenus = [
+    {
+      label: "In the classroom",
+      links: [
+        { href: "/early_childhood", label: "Early Childhood" }
+      
+      ]
+    },
     {
       label: "About us",
       links: [
@@ -72,13 +80,7 @@ const NavBar2 = () => {
       
       ]
     },
-    {
-      label: "In the classroom",
-      links: [
-        { href: "/early_childhood", label: "Early Childhood" }
-      
-      ]
-    },
+
     
   ];
 
@@ -128,7 +130,7 @@ const NavBar2 = () => {
         {subMenus.map((subMenu, subMenuIndex) => (
   <div key={subMenuIndex}>
     <p className={styles.mobile_menu_label}>{subMenu.label}</p>
-    <ul>
+    <ul className={styles.mobile_list_container}>
       {subMenu.links.map((subLink, subLinkIndex) => (
         <li key={subLinkIndex}>
           <Link className={styles.mobile_sub_menu_link} href={subLink.href}>{subLink.label}</Link>
