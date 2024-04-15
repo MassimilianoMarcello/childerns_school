@@ -127,11 +127,11 @@ const NavBar2 = () => {
         <div className={styles.mobile_menu_container}>
         {subMenus.map((subMenu, subMenuIndex) => (
   <div key={subMenuIndex}>
-    <p>{subMenu.label}</p>
+    <p className={styles.mobile_menu_label}>{subMenu.label}</p>
     <ul>
       {subMenu.links.map((subLink, subLinkIndex) => (
         <li key={subLinkIndex}>
-          <Link href={subLink.href}>{subLink.label}</Link>
+          <Link className={styles.mobile_sub_menu_link} href={subLink.href}>{subLink.label}</Link>
         </li>
       ))}
     </ul>
